@@ -1,0 +1,26 @@
+nav {
+    /*background: linear-gradient(to right,#034593,#33442d);*/
+    background: linear-gradient(to right,#451710,#20384f) !important;
+}
+
+.footer{
+    /*background: linear-gradient(to right,#034593,#33442d);*/
+    background: linear-gradient(to right,#451710,#20384f) !important;
+}
+
+nav .nav-link:hover {
+    color: #0a58ca !important;
+}
+
+#userMenuLink {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#userMenuLink:hover {
+    color: #0a58ca;
+}
+
+body{
+    background: whitesmoke;
+}
