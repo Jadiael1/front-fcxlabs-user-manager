@@ -24,11 +24,20 @@ document.querySelector("#formLogin").addEventListener("submit", async evt => {
     // ];
     let auth;
     try {
+        credential.setAttribute("disabled", "");
+        password.setAttribute("disabled", "");
+        form[2].setAttribute("disabled", "");
         auth = await req(url, 'GET');
         createCookie("auth", JSON.stringify(auth), 5);
+        credential.removeAttribute("disabled");
+        password.removeAttribute("disabled");
+        form[2].removeAttribute("disabled");
         window.location.href = "./dash.html";
     } catch (e) {
         alert("Falha ao realizar Login");
+        credential.removeAttribute("disabled");
+        password.removeAttribute("disabled");
+        form[2].removeAttribute("disabled");
     }
 
 
