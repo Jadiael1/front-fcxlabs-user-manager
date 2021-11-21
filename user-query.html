@@ -37,7 +37,7 @@
 
 <body>
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="./dash.html">Dash</a>
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="./user-query.html">Dash</a>
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -78,19 +78,22 @@
                     <div class="row">
                         <div class="mb-3 col-6">
                             <label for="inputUserName" class="form-label">Usuario</label>
-                            <input type="text" class="form-control" name="user" id="inputUserName" value="Joao1" aria-describedby="userHelp">
+                            <input type="text" class="form-control" name="user" id="inputUserName" value=""
+                                aria-describedby="userHelp">
                             <div id="userHelp" class="form-text">Digite o nome do usuario que deseja pesquisar</div>
                         </div>
                         <div class="mb-3 col-6">
                             <label for="inputLogin" class="form-label">Login</label>
-                            <input type="text" class="form-control" name="login" id="inputLogin" value="Joao1" aria-describedby="loginHelp">
+                            <input type="text" class="form-control" name="login" id="inputLogin" value=""
+                                aria-describedby="loginHelp">
                             <div id="loginHelp" class="form-text">Digite o nome do login que deseja pesquisar</div>
                         </div>
 
                         <div class="mb-3 col-12">
                             <label for="selectStatus" class="form-label">Situação Do Usuario</label>
-                            <select class="form-select" name="status" id="selectStatus" size="3" aria-label="size 2 select"
-                                aria-describedby="statusHelp">
+                            <select class="form-select" name="status" id="selectStatus" size="3"
+                                aria-label="size 2 select" aria-describedby="statusHelp">
+                                <option value="2">Todos</option>
                                 <option value="1" selected>Ativo</option>
                                 <option value="0">Inativo</option>
                             </select>
@@ -98,40 +101,51 @@
                         </div>
 
                         <div class="mb-3 col-6">
-                            <label for="inputeBirthdayInitial" class="form-label">Entre com a data de nascimento inicial</label>
-                            <input type="date" class="form-control" name="birthDayInitial" id="inputeBirthdayInitial" value="2021-01-01">
+                            <label for="inputeBirthdayInitial" class="form-label">Entre com a data de nascimento
+                                inicial</label>
+                            <input type="date" class="form-control" name="birthDayInitial" id="inputeBirthdayInitial"
+                                value="">
                         </div>
 
                         <div class="mb-3 col-6">
-                            <label for="inputeBirthdayLast" class="form-label">Entre com a data de nascimento final</label>
-                            <input type="date" class="form-control" name="birthDayLast" id="inputeBirthdayLast" value="2021-11-20">
+                            <label for="inputeBirthdayLast" class="form-label">Entre com a data de nascimento
+                                final</label>
+                            <input type="date" class="form-control" name="birthDayLast" id="inputeBirthdayLast"
+                                value="">
                         </div>
 
                         <div class="mb-3 col-6">
-                            <label for="inputeRegisterInitial" class="form-label">Entre com a data de registro inicial</label>
-                            <input type="date" class="form-control" name="firstRegistration" id="inputeRegisterInitial" value="2021-01-01">
-                        </div>
-                        
-                        <div class="mb-3 col-6">
-                            <label for="inputeRegisterLast" class="form-label">Entre com a data de registro final</label>
-                            <input type="date" class="form-control" name="lastRegistration" id="inputeRegisterLast" value="2021-11-20">
+                            <label for="inputeRegisterInitial" class="form-label">Entre com a data de registro
+                                inicial</label>
+                            <input type="date" class="form-control" name="firstRegistration" id="inputeRegisterInitial"
+                                value="">
                         </div>
 
                         <div class="mb-3 col-6">
-                            <label for="inputeUpdateInitial" class="form-label">Entre com a data de alteração inicial</label>
-                            <input type="date" class="form-control" name="initialUpdate" id="inputeUpdateInitial" value="2021-01-01">
+                            <label for="inputeRegisterLast" class="form-label">Entre com a data de registro
+                                final</label>
+                            <input type="date" class="form-control" name="lastRegistration" id="inputeRegisterLast"
+                                value="">
                         </div>
-                        
+
+                        <div class="mb-3 col-6">
+                            <label for="inputeUpdateInitial" class="form-label">Entre com a data de alteração
+                                inicial</label>
+                            <input type="date" class="form-control" name="initialUpdate" id="inputeUpdateInitial"
+                                value="">
+                        </div>
+
                         <div class="mb-3 col-6">
                             <label for="inputeUpdateLast" class="form-label">Entre com a data de alteração final</label>
-                            <input type="date" class="form-control" name="lastUpdate" id="inputeUpdateLast" value="2021-11-20">
+                            <input type="date" class="form-control" name="lastUpdate" id="inputeUpdateLast" value="">
                         </div>
 
                         <div class="mb-3 col-12">
                             <label for="selectAgeGroup" class="form-label">Situação Do Usuario</label>
-                            <select class="form-select form-select-sm" name="ageGroup" id="selectAgeGroup" aria-label="select"
-                                aria-describedby="AgeGroupHelp">
-                                <option value="1" selected>Maior que 18 e menor que 26</option>
+                            <select class="form-select form-select-sm" name="ageGroup" id="selectAgeGroup"
+                                aria-label="select" aria-describedby="AgeGroupHelp">
+                                <option value="" selected>Listar Todas Faixa Etaria</option>
+                                <option value="1">Maior que 18 e menor que 26</option>
                                 <option value="2">Maior que 25 e menor que 31</option>
                                 <option value="3">Maior que 30 e menor que 36</option>
                                 <option value="4">Maior que 35 e menor que 41</option>
@@ -145,6 +159,18 @@
                     <button type="submit" class="btn btn-primary">Pesquisar</button>
                 </form>
 
+                <table id="tableUsers" class="table table-success table-hover display"></table>
+                <button type="button" style="display: none;" class="btn btn-primary" id="newSearch">Fazer Nova
+                    Pesquisa</button>
+
+                
+
+                <button type="button" id="btnExportExcel" style="display: none;" class="btn btn-primary">Export To Excel
+                    File</button>
+
+                <button type="button" id="btnExportPDF" style="display: none;" class="btn btn-primary">Export To PDF</button>
+
+                <button type="button" id="btnExportWORD" style="display: none;" class="btn btn-primary">Export To WORD</button>
 
             </main>
         </div>
@@ -152,6 +178,11 @@
 
     <script src="./assets/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <script src="./assets/js/user-query.js"></script>
 </body>
 
