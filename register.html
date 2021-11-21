@@ -44,33 +44,61 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-8">
-                    <form class="needs-validation" novalidate id="formRegister" method="POST">
+                    <form class="needs-validation" id="formRegister" method="POST">
                         <h1 class="h3 mb-3 fw-normal d-flex justify-content-center">Registrar</h1>
                         <div class="row">
                             <div class="mb-3 col-6">
                                 <label for="inputName" class="form-label">Nome</label>
                                 <input type="text" class="form-control" name="name" id="inputName" value=""
-                                    aria-describedby="nameHelp">
+                                    aria-describedby="nameHelp" required>
                                 <div id="nameHelp" class="form-text">Digite seu nome</div>
                             </div>
                             <div class="mb-3 col-6">
                                 <label for="inputLogin" class="form-label">Login</label>
                                 <input type="text" class="form-control" name="login" id="inputLogin" value=""
-                                    aria-describedby="loginHelp">
+                                    aria-describedby="loginHelp" required>
                                 <div id="loginHelp" class="form-text">Digite um Login</div>
                             </div>
                             <div class="mb-3 col-6">
                                 <label for="inputPassword" class="form-label">Senha</label>
                                 <input type="password" class="form-control" name="password" id="inputPassword" value=""
-                                    aria-describedby="passwordHelp">
+                                    aria-describedby="passwordHelp" required>
                                 <div id="passwordHelp" class="form-text">Digite uma senha</div>
+                            </div>
+                            <div class="mb-3 col-6">
+                                <label for="inputConfirmPassword" class="form-label">Confirme sua senha</label>
+                                <input type="password" class="form-control" id="inputConfirmPassword" value=""
+                                    aria-describedby="confirmPasswordHelp" required>
+                                <div id="confirmPasswordHelp" class="form-text">Confirme sua senha</div>
                             </div>
                             <div class="mb-3 col-6">
                                 <label for="inputEmail" class="form-label">Email</label>
                                 <input type="email" class="form-control" name="email" id="inputEmail" value=""
-                                    aria-describedby="emailHelp">
+                                    aria-describedby="emailHelp" required>
                                 <div id="emailHelp" class="form-text">Digite um email</div>
                             </div>
+
+                            <div class="mb-3 col-6">
+                                <label for="inputTelephone" class="form-label">Telefone</label>
+                                <input type="text" class="form-control" name="telephone" id="inputTelephone" value=""
+                                    aria-describedby="telephoneHelp" required>
+                                <div id="telephoneHelp" class="form-text">Digite um telefone valido</div>
+                            </div>
+
+                            <div class="mb-3 col-6">
+                                <label for="inputBirthDate" class="form-label">Data de aniversario</label>
+                                <input type="date" class="form-control" name="birth_date" id="inputBirthDate" value=""
+                                    aria-describedby="birthDateHelp" required>
+                                <div id="birthDateHelp" class="form-text">Informe sua data de nascimento</div>
+                            </div>
+
+                            <div class="mb-3 col-6">
+                                <label for="inputMotherName" class="form-label">Nome da mãe</label>
+                                <input type="text" class="form-control" name="mother_name" id="inputMotherName" value=""
+                                    aria-describedby="motherNameHelp" required>
+                                <div id="motherNameHelp" class="form-text">Informe o nome da sua mãe</div>
+                            </div>
+                            <button type="submit" class="btn btn-outline-success">Registrar</button>
                         </div>
                         <p class="mt-5 mb-3 text-muted">&copy; 2021–2021</p>
                     </form>
@@ -100,6 +128,7 @@
     </footer>
     <script src="./assets/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/req.js"></script>
+    <script src="./assets/js/register.js"></script>
 </body>
 
 </html>

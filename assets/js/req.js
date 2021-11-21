@@ -1,3 +1,11 @@
+function isJson(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
 let req = (url, method, formData = "", h = {}) => new Promise((resolve, reject) => {
     let xmlhttp;
     if (window.XMLHttpRequest) {
@@ -7,12 +15,12 @@ let req = (url, method, formData = "", h = {}) => new Promise((resolve, reject) 
     }
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status >= 200 && this.status <= 205) {
-            if (this.responseText.length > 0) {
+            if (this.responseText.length > 0 && isJson(this.responseText)) {
                 resolve(JSON.parse(this.responseText));
             }
             resolve();
         } else if (this.readyState == 4 && this.status !== 200 && this.status !== 0) {
-            if (this.responseText.length > 0) {
+            if (this.responseText.length > 0 && isJson(this.responseText)) {
                 reject(JSON.parse(this.responseText));
             }
             reject();
