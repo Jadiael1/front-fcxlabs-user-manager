@@ -1,6 +1,6 @@
 document.querySelector("#formRegister").addEventListener("submit", async evt => {
     evt.preventDefault();
-    let form = evt.path[0];
+    let form = evt.target;
     let formData = new FormData(form);
     formData = Object.fromEntries(formData);
     let header = [
@@ -10,7 +10,7 @@ document.querySelector("#formRegister").addEventListener("submit", async evt => 
     let getPAram = `user=${formData.login}&password=${formData.password}`;
     formData = JSON.stringify(formData);
     
-    let url = "https://localhost:5001/api/Users";
+    let url = "https://api-fcxlabs-usermanager.juvhost.com/api/Users";
     let data;
     try {
         data = await req(url, "POST", formData, header);

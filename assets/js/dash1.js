@@ -15,7 +15,7 @@
     </thead>
     <tbody>`;
     let tableUsers = document.querySelector("#tableUsers");
-    let url = "https://localhost:5001/api/Users";
+    let url = "https://api-fcxlabs-usermanager.juvhost.com/api/Users";
     let header = [
         { headerName: 'Content-type', headerValue: "application/json;charset=UTF-8" },
     ];

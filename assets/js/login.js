@@ -38,13 +38,13 @@ if (params.user != undefined && params.password != undefined) {
 
 document.querySelector("#formLogin").addEventListener("submit", async evt => {
     evt.preventDefault();
-    let form = evt.path[0];
+    let form = evt.target;
     let credential = form[0];
     let password = form[1];
 
     //let formData = new FormData(form);
     //formData = JSON.stringify(Object.fromEntries(formData));
-    let url = `https://localhost:5001/api/Auth/${credential.value}/${password.value}`;
+    let url = `https://api-fcxlabs-usermanager.juvhost.com/api/Auth/${credential.value}/${password.value}`;
     // let header = [
     //     { headerName: 'Content-type', headerValue: "application/json;charset=UTF-8" },
     // ];

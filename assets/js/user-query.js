@@ -1,7 +1,7 @@
 document.querySelector("#formUserQuery").addEventListener("submit", async evt => {
     evt.preventDefault();
 
-    let form = evt.path[0];
+    let form = evt.target;
 
     let formData = new FormData(form);
 
@@ -20,7 +20,7 @@ document.querySelector("#formUserQuery").addEventListener("submit", async evt =>
     ];
 
     formData = JSON.stringify(formData);
-    let url = "https://localhost:5001/api/query";
+    let url = "https://api-fcxlabs-usermanager.juvhost.com/api/query";
     let data;
     try {
         data = await req(url, "POST", formData, header);
@@ -205,7 +205,7 @@ function editUser(form) {
         { headerName: 'accept', headerValue: "*/*" },
         { headerName: 'Content-Type', headerValue: "application/json" }
     ];
-    let url = "https://localhost:5001/api/Users/" + formData.id;
+    let url = "https://api-fcxlabs-usermanager.juvhost.com/api/Users/" + formData.id;
 
     formData.id = parseInt(formData.id, 10);
     formData.status = JSON.parse(formData.status.toLowerCase());
@@ -224,7 +224,7 @@ function activeUser(user, el) {
         { headerName: 'accept', headerValue: "*/*" },
         { headerName: 'Content-Type', headerValue: "application/json" }
     ];
-    let url = "https://localhost:5001/api/Users/" + user.id;
+    let url = "https://api-fcxlabs-usermanager.juvhost.com/api/Users/" + user.id;
     let obj = {
         "id": user.id,
         "name": user.name,
@@ -247,14 +247,14 @@ function activeUser(user, el) {
 function removeUser(user, el) {
     user = JSON.parse(atob(user));
 
-    //let url = "https://localhost:5001/api/Users/" + id;
+    //let url = "https://api-fcxlabs-usermanager.juvhost.com/api/Users/" + id;
     let header = [
         { headerName: 'accept', headerValue: "*/*" },
         { headerName: 'Content-Type', headerValue: "application/json" }
     ];
     //req(url, "DELETE", "", header);
 
-    let url = "https://localhost:5001/api/Users/" + user.id;
+    let url = "https://api-fcxlabs-usermanager.juvhost.com/api/Users/" + user.id;
 
     let obj = {
         "id": user.id,

@@ -12,13 +12,13 @@ function createCookie(name, value, minutes) {
 
 document.querySelector("#resetCredentialForm").addEventListener("submit", async evt => {
     evt.preventDefault();
-    let form = evt.path[0];
+    let form = evt.target;
     let credential = form[0];
 
     //let formData = new FormData(form);
     //formData = JSON.stringify(Object.fromEntries(formData));
 
-    let url = `https://localhost:5001/api/Auth/${credential.value}`;
+    let url = `https://api-fcxlabs-usermanager.juvhost.com/api/Auth/${credential.value}`;
     // let header = [
     //     { headerName: 'Content-type', headerValue: "application/json;charset=UTF-8" },
     // ];
